@@ -1,0 +1,110 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: light-grey;
+	color: dark-grey;
+}
+
+.cabecalho{
+	background-color: rgb(255, 133, 251);
+	color: black;
+	text-align: center;
+	padding: 2px;
+}
+
+.menu {
+	background-color: rgb(255, 133, 251);
+	text-align: center;
+	padding: 2px;
+}
+
+.menu a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+    margin-right: 15px;
+}
+
+.conteudo {
+	background-color: white;
+	padding: 20px;
+}
+
+.rodape {
+	background-color: rgb(255, 133, 251);
+	color: black;
+	text-align: center;
+	padding: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Configuração básica da barra de navegação */
+.navbar {
+  background-color: rgb(255, 133, 251)  ;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.link-principal {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+/* Sublinhado do link ao passar o mouse (o que fez no passo anterior) */
+.link-principal:hover {
+  text-decoration: underline;
+}
+
+/* 1. Posicionamento do container do menu */
+.menu-item {
+  display: inline-block;
+  position: relative; /* Garante que o menu grande se alinha por aqui */
+}
+
+/* 2. ESCONDER o Menu Grande por padrão e dar estilo de "caixa grande" */
+.mega-menu {
+  display: none;        /* Esconde o menu */
+  position: absolute;   /* Flutua por cima do resto do conteúdo */
+  top: 100%;            /* Aparece logo abaixo do link */
+  left: 0;
+  background-color: white;
+  min-width: 500px;     /* Define a largura grande do menu */
+  box-shadow: 0px 8px 16px rgb(255, 133, 251);
+  padding: 20px;
+  border-radius: 4px;
+  z-index: 1000;        /* Garante que fica à frente de tudo */
+}
+
+/* 3. MOSTRAR o menu quando o rato passa por cima do container */
+.menu-item:hover .mega-menu {
+  display: flex;        /* Mostra o menu e organiza as colunas lado a lado */
+  gap: 30px;            /* Espaço entre as colunas do menu */
+}
+
+/* Estilo das colunas dentro do menu grande */
+.coluna {
+  display: flex;
+  flex-direction: column;
+}
+
+.coluna h3 {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.coluna a {
+  color: black;
+  text-decoration: none;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.coluna a:hover {
+  color: #007BFF; /* Muda de cor ao passar o rato nas subcategorias */
+}
