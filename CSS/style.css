@@ -272,3 +272,49 @@ footer {
     height: 32px;
     fill: #fff;
 }
+
+/* Definições da Galeria de Fotos */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.galeria-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    height: 300px;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Efeito ao passar o rato (Zoom na imagem) */
+.galeria-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Legenda escura que aparece por cima da foto ao passar o rato */
+.galeria-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(74, 59, 50, 0.9));
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.galeria-item:hover .galeria-overlay {
+    opacity: 1;
+}
