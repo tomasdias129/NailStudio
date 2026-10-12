@@ -268,7 +268,28 @@ footer {
     .navbar {
         flex-direction: column;
         gap: 15px;
+        text-align: center;
     }
+
+    .nav-links {
+        display: flex;
+        gap: 12px; /* Reduzi um pouco o gap para caber tudo melhor lado a lado */
+        width: 100%;
+        justify-content: center;
+        
+        /* 🌟 OS TRÊS TRUQUES PARA NÃO PARTIR O TEXTO: */
+        white-space: nowrap;      /* Impede que o "Sobre Mim" se separe em duas linhas */
+        overflow-x: auto;         /* Se o telemóvel for muito pequeno, permite arrastar o menu para o lado */
+        padding: 5px 10px;        /* Dá um pequeno espaço acima e abaixo para o toque */
+        
+        /* Esconde a barra de rolagem feia no telemóvel para o menu parecer limpo */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .nav-links::-webkit-scrollbar {
+        display: none; /* Esconde a barra de rolagem no Chrome/Safari do telemóvel */
+    }
+
     .hero h2 {
         font-size: 32px;
     }
