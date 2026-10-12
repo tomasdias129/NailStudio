@@ -169,6 +169,11 @@ header {
     padding: 25px;
     border-top: 5px solid var(--cor-principal);
     transition: transform 0.3s;
+
+    /* 🌟 TRUQUE MÁGICO PARA ALINHAR OS BOTÕES NO FUNDO: */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Força o botão a ir para o fundo e o título para o topo */
 }
 
 .servico-card:hover {
