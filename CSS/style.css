@@ -80,7 +80,7 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 22px;
+    gap: 25px;
 }
 
 .nav-links a {
